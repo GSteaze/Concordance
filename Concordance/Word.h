@@ -26,5 +26,23 @@ public:
 	vector<int> getLineOccurrence();
 
 	string toString();
+
+	bool operator< (Word &rhs) {
+		if (this->getWord().compare(rhs.getWord()) < 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	Word& Word::operator=(Word &rhs) {
+		if (this != &rhs) {
+			this->setWord(rhs.getWord());
+			this->setWordCount(rhs.getWordCount());
+			this->setWordCount(rhs.getWordCount());
+		}
+		return *this;
+	}
 };
 

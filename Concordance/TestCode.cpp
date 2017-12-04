@@ -5,6 +5,7 @@
 TestCode::TestCode()
 {
 	testWord();
+	testConcordance();
 }
 
 
@@ -37,4 +38,24 @@ void TestCode::testWord()
 
 
 	cout << endl << "Word Tested" << endl;
+}
+
+void TestCode::testConcordance()
+{
+	cout << endl << "Testing Concordance" << endl;
+
+	Concordance test = Concordance();
+	test.fillFromFile("TestFile.txt");
+
+	cout << endl << "Concordance Tested" << endl;
+}
+
+void TestCode::testMenuIO()
+{
+	cout << endl << "Testing MenuIO" << endl;
+
+
+
+
+	cout << endl << "MenuIO Tested" << endl;
 }

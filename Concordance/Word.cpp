@@ -21,11 +21,7 @@ Word::~Word()
 
 void Word::setWord(string word)
 {
-	string formattedWord = word;
-	for (int index = 0; index < formattedWord.size(); index++) {
-		formattedWord[index] = tolower(formattedWord[index]);
-	}
-	_word = formattedWord;
+	_word = word;
 }
 
 string Word::getWord()

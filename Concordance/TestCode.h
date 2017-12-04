@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Word.h"
+#include "Concordance.h"
 
 using namespace std;
 
@@ -14,5 +15,9 @@ public:
 	~TestCode();
 
 	void testWord();
+
+	void testConcordance();
+
+	void testMenuIO();
 };
 
