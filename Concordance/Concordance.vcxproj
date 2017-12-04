@@ -112,12 +112,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="TestCode.cpp" />
+    <ClCompile Include="Word.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Apology.txt" />
     <Text Include="ModestProposal.txt" />
     <Text Include="Sherlock.txt" />
     <Text Include="WizardOfOz.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestCode.h" />
+    <ClInclude Include="Word.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
