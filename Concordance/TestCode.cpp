@@ -4,8 +4,9 @@
 
 TestCode::TestCode()
 {
-	testWord();
+	//testWord();
 	testConcordance();
+	//testMenuIO();
 }
 
 
@@ -30,10 +31,10 @@ void TestCode::testWord()
 	cout << "Word count increment to 4 : " << testWord.getWordCount() << endl;
 
 	testWord.addLineOccurrence(1);
-	cout << "LineOccurrence at 1" << testWord.toString() << endl;
+	cout << "LineOccurrence at 1 : " << testWord.toString() << endl;
 
 	testWord.addLineOccurrence(2);
-	cout << "Add line occurrence at 2" << testWord.toString() << endl;
+	cout << "Add line occurrence at 2 : " << testWord.toString() << endl;
 
 
 
@@ -46,6 +47,10 @@ void TestCode::testConcordance()
 
 	Concordance test = Concordance();
 	test.fillFromFile("TestFile.txt");
+	//test.newFillFromFile("TestFile.txt");
+	test.sortListByWords();
+	test.saveToFile("TestFile.txt");
+
 
 	cout << endl << "Concordance Tested" << endl;
 }
@@ -54,8 +59,7 @@ void TestCode::testMenuIO()
 {
 	cout << endl << "Testing MenuIO" << endl;
 
-
-
-
+	MenuIO testMenu = MenuIO();
+	
 	cout << endl << "MenuIO Tested" << endl;
 }

@@ -74,7 +74,7 @@ string Word::toString()
 {
 	string formattedString = "";
 	formattedString.append(_word);
-	formattedString.append("(occurrences): ");
+	formattedString.append(" (occurrences): ");
 	if (_lineOccurrence.empty()) {
 		formattedString.append("No occurrences");
 	}

@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -19,6 +20,8 @@ public:
 	~Concordance();
 
 	void fillFromFile(string fileName);
+
+	void newFillFromFile(string fileName);
 
 	void saveToFile(string fileName);
 

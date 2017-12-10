@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "Concordance.h"
 #include "Validator.h"
@@ -17,6 +18,6 @@ public:
 
 	void displayTextOptions();
 
-	void userTextSelection();
+	void userSelection();
 };
 

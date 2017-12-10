@@ -4,6 +4,8 @@
 
 MenuIO::MenuIO()
 {
+	displayWelcome();
+	userSelection();
 }
 
 
@@ -26,21 +28,30 @@ void MenuIO::displayTextOptions()
 		<< "5. Quit" << endl << endl;
 }
 
-void MenuIO::userTextSelection()
+void MenuIO::userSelection()
 {
-	string fileName = "";
-	int userSelection = Validator::intValidator(1, 4);
-	switch (userSelection) {
-	case 1: fileName = "Apology.txt";
-		break;
-	case 2: fileName = "ModestProposal.txt";
-		break;
-	case 3: fileName = "Sherlock.txt";
-		break;
-	case 4: fileName = "WizardOfOz.txt";
-		break;
-	default: cout << "Invalid selection." << endl;
-		break;
+	bool isAgain = true;
+	while (isAgain) {
+		displayTextOptions();
+
+		string fileName = "";
+		int userSelection = Validator::intValidator(1, 4);
+		switch (userSelection) {
+		case 1: fileName = "Apology.txt";
+			break;
+		case 2: fileName = "ModestProposal.txt";
+			break;
+		case 3: fileName = "Sherlock.txt";
+			break;
+		case 4: fileName = "WizardOfOz.txt";
+			break;
+		case 5: cout << "Program Closing." << endl;
+			isAgain = false;
+			break;
+		default: cout << "Invalid selection." << endl;
+			break;
+		}
+		Concordance concordance = Concordance(fileName);
+		cout << "Concordance saved to file." << endl;
 	}
-	Concordance concordance = Concordance(fileName);
 }

@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Word.h"
 #include "Concordance.h"
+#include "MenuIO.h"
 
 using namespace std;
 

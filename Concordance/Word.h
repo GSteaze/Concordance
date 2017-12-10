@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 
@@ -40,7 +41,7 @@ public:
 		if (this != &rhs) {
 			this->setWord(rhs.getWord());
 			this->setWordCount(rhs.getWordCount());
-			this->setWordCount(rhs.getWordCount());
+			this->_lineOccurrence = rhs._lineOccurrence;
 		}
 		return *this;
 	}
